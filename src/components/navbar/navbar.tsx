@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/providers/theme-context";
 
-import { motion, useAnimate } from "framer-motion";
+import { color, motion, useAnimate } from "framer-motion";
 import { MoonIcon, SunIcon } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -50,7 +50,8 @@ export default function Navbar() {
       animate(
         scope.current,
         {
-          backgroundColor: "rgba(9, 11, 10, 0.3)",
+          backgroundColor: "",
+          color: "black",
           width: "auto",
         },
         {
@@ -130,18 +131,18 @@ export default function Navbar() {
   return (
     <div
       className={cn(
-        "top-0 fixed flex justify-center z-50 px-8  w-full min-h-[76px] max-md:hidden ",
+        "top-0 fixed flex justify-center z-50 px-8  w-full min-h-[76px] max-md:hidde",
         !isCompressed && "border-b"
       )}
     >
       <motion.div
         id="main-nav-content"
         className={cn(
-          "z-50   my-3  mx-auto transition-transform duration-300 ",
-          !isCompressed && "  flex justify-between px-8  gap-6 w-full ",
+          "z-50 my-3 mx-auto transition-transform duration-300",
+          !isCompressed && "flex justify-between px-8  gap-6 w-full ",
           !isCompressed && `transform -translate-x-[${mainContentOffset}px]`,
           isCompressed &&
-            "flex gap-4  px-4 rounded-full backdrop-blur-sm border dark:bg-[rgba(9, 11, 10, 0.3)]"
+            "flex gap-4 px-4 rounded-full backdrop-blur-sm border dark:bg-[rgba(9, 11, 10, 0.3)]"
         )}
         ref={scope}
       >
@@ -154,7 +155,7 @@ export default function Navbar() {
               )}
               id="companyLogo"
             >
-              <Avatar className="border">
+              <Avatar>
                 <AvatarImage
                   src="/logo/circle.svg"
                   sizes="24px"
@@ -165,9 +166,14 @@ export default function Navbar() {
             </div>
           </Link>
 
-          <motion.span className={cn(isCompressed && "")} id="companyName">
-            <p className="inline text-sm mr-2">with</p>
-            <motion.span className="font-medium not-italic">
+          <motion.span
+            className={cn(isCompressed && "text-black/80 dark:text-white/80")}
+            id="companyName"
+          >
+            <p className="inline text-sm mr-2 text-black/80 dark:text-white/80">
+              with
+            </p>
+            <motion.span className="font-medium not-italic text-black/80 dark:text-white/80">
               {config.name}
             </motion.span>
           </motion.span>
@@ -191,7 +197,7 @@ export default function Navbar() {
             {links.map((link) => (
               <li
                 key={link.name}
-                className="mx-auto w-full font-medium font-opensans"
+                className="mx-auto w-full font-medium text-black/80 dark:text-white/80"
               >
                 <Link href={link.href}>{link.name}</Link>
               </li>
@@ -203,7 +209,7 @@ export default function Navbar() {
           id="right-section"
         >
           {!isCompressed && (
-            <div className="flex justify-center items-center w-fit">
+            <div className="flex justify-center items-center w-fit text-black/80 dark:text-white/80">
               <button onClick={toggleTheme}>
                 {theme === "light" ? (
                   <MoonIcon className="size-6" />

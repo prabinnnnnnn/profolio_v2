@@ -9,6 +9,7 @@ import { Menu, Moon, Phone, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { links } from "./links";
 import { config } from "@/config";
+
 export default function MobileNavbar() {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
