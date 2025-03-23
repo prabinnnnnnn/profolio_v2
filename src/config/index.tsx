@@ -171,7 +171,7 @@ export const config: Config = {
         "Optimized for performance, reducing load times for better user experience",
       ],
       company: "Freelance",
-      image: "https://images.unsplash.com/photo-1534181876757-1c5f0c71f99d",
+      image: "/project/music.webp",
       tags: ["JavaScript", "Web Audio API", "CSS", "Frontend"],
       position: "Frontend Developer",
       type: "personal project",
@@ -208,7 +208,7 @@ export const config: Config = {
         "Integrated social media sharing buttons",
       ],
       company: "Freelance",
-      image: "https://images.unsplash.com/photo-1593642634315-48b0e8a78e3b",
+      image: "/project/blog.webp",
       tags: ["Node.js", "Next js", "SEO", "Tailwind"],
       position: "Developer & Designer",
       type: "personal project",
@@ -304,32 +304,29 @@ export const config: Config = {
     items: [
       {
         name: "Bill Gates",
-        image:
-          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3",
+        image: "/users/avatar-1.jpg",
         quote:
           "Even though we were competitors, I always admired his vision and dedication to creating insanely great products that changed the world.",
         company: "Microsoft",
       },
       {
         name: "Jony Ive",
-        image:
-          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3",
+        image: "/users/avatar-2.jpg",
         quote:
           "Working together, we pushed the boundaries of what was possible in industrial design. His perfectionism was infectious.",
         company: "LoveFrom",
       },
       {
         name: "Wozniak",
-        image:
-          "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3",
+        image: "/users/avatar-3.jpg",
         quote:
           "We started in a garage and ended up changing the world. His marketing genius and my technical skills were the perfect combination.",
         company: "Apple Co-founder",
       },
       {
         name: "Tim Cook",
-        image:
-          "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3",
+        image: "/users/avatar-4.jpg",
+
         quote:
           "His attention to detail and innovative thinking transformed our entire approach to product design. The results speak for themselves.",
         company: "Apple Inc.",

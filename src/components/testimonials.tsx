@@ -31,9 +31,7 @@ export default function Testimonials() {
                       <AvatarImage
                         src={testimonial.image}
                         alt={testimonial.name}
-                        height="400"
-                        width="400"
-                        loading="lazy"
+                        className="object-cover"
                       />
                       <AvatarFallback>
                         {testimonial.name

@@ -1,7 +1,7 @@
 "use client";
 import Skills from "@/components/features-1";
 import HeroSection from "@/components/hero-section";
-import { Education } from "@/components/education";
+import { Certificate } from "@/components/certificte";
 import Testimonials from "@/components/testimonials";
 import { Projects } from "@/components/projects";
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <HeroSection />
       <Skills />
       <Projects />
-      <Education />
+      <Certificate />
       <Testimonials />
     </div>
   );

@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { links } from "./links";
 import { config } from "@/config";
+import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 
 export default function Navbar() {
   const [isCompressed, setIsCompressed] = useState(false);
@@ -153,12 +154,14 @@ export default function Navbar() {
               )}
               id="companyLogo"
             >
-              <img
-                src="/logo/circle.svg"
-                alt="company logo"
-                className="size-[30px]"
-                loading="lazy"
-              />
+              <Avatar className="border">
+                <AvatarImage
+                  src="/logo/circle.svg"
+                  sizes="24px"
+                  aria-label="logo"
+                />
+                <AvatarFallback>Logo</AvatarFallback>
+              </Avatar>
             </div>
           </Link>
 

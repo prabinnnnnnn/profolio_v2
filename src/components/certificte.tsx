@@ -5,9 +5,8 @@ import HeaderTitle from "./util/header-title";
 import { config } from "@/config";
 import { Card } from "./ui/card";
 import Link from "next/link";
-import Image from "next/image";
 
-export function Education() {
+export function Certificate() {
   return (
     <section className="py-16 md:py-32" id="education">
       <div className="container px-4 md:px-6">
