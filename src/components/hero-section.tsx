@@ -98,27 +98,6 @@ export default function HeroSection() {
                 >
                   {config.hero.subtitle}
                 </TextEffect>
-
-                <AnimatedGroup
-                  variants={{
-                    container: {
-                      visible: {
-                        transition: {
-                          staggerChildren: 0.05,
-                          delayChildren: 0.75,
-                        },
-                      },
-                    },
-                    ...transitionVariants,
-                  }}
-                  className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row"
-                >
-                  <div
-                    key={1}
-                    className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5"
-                  >
-                  </div>
-                </AnimatedGroup>
               </div>
             </div>
 
@@ -147,15 +126,7 @@ export default function HeroSection() {
                     alt="app screen"
                     width="2700"
                     height="1440"
-                    loading="lazy"
-                  />
-                  <Image
-                    className="z-2 border-border/25 aspect-15/8 relative rounded-2xl object-cover  border dark:hidden"
-                    src={config.hero.backgroundImage || ""}
-                    alt="app screen"
-                    width="2700"
-                    height="1440"
-                    loading="lazy"
+                    priority
                   />
                 </div>
               </div>
