@@ -126,7 +126,6 @@ export default function Navbar() {
 
         if (isCompressed) animateCompressed();
         else animateExpanded();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isCompressed]);
 
     return (
@@ -141,11 +140,11 @@ export default function Navbar() {
                 className={cn(
                     "z-50   my-3  mx-auto transition-transform duration-300 ",
                     !isCompressed &&
-                        "  flex justify-between px-8  gap-6 w-full ",
+                    "  flex justify-between px-8  gap-6 w-full ",
                     !isCompressed &&
-                        `transform -translate-x-[${mainContentOffset}px]`,
+                    `transform -translate-x-[${mainContentOffset}px]`,
                     isCompressed &&
-                        "flex gap-4  px-4 rounded-full backdrop-blur-sm border",
+                    "flex gap-4  px-4 rounded-full backdrop-blur-sm border",
                 )}
                 ref={scope}
             >
@@ -184,7 +183,7 @@ export default function Navbar() {
                     className={cn(
                         " justify-center gap-4 max-md:hidden mx-auto my-auto  w-fit h-fit text-sm ",
                         !isCompressed &&
-                            "left-1/2 absolute -translate-x-1/2 py-4",
+                        "left-1/2 absolute -translate-x-1/2 py-4",
                     )}
                 >
                     <motion.ul

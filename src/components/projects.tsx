@@ -5,6 +5,7 @@ import HeaderTitle from "./util/header-title";
 import { config } from "@/config";
 import { Button } from "./ui/button";
 import { Card, CardDescription, CardHeader } from "./ui/card";
+import Image from "next/image";
 
 export function Projects() {
   return (
@@ -59,8 +60,8 @@ export function Projects() {
                     </div>
                   </div>
                   <div className="relative h-16 w-20 overflow-hidden rounded-lg">
-                    <img
-                      src={project.image}
+                    <Image
+                      src={project.image || ""}
                       alt={project.title}
                       loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover"

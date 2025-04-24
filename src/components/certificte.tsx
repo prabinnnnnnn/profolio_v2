@@ -5,6 +5,7 @@ import HeaderTitle from "./util/header-title";
 import { config } from "@/config";
 import { Card } from "./ui/card";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Certificate() {
     return (
@@ -50,7 +51,7 @@ export function Certificate() {
                                         </p>
                                     </div>
                                     <div className="relative h-10 w-20 overflow-hidden rounded-lg ">
-                                        <img
+                                        <Image
                                             src={certificate.logo}
                                             alt={certificate.platform}
                                             className="absolute inset-0 h-full w-full object-contain"
