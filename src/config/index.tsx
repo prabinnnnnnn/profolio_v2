@@ -10,7 +10,6 @@ export type SocialLinks = {
     github: SocialLink;
     linkedin: SocialLink;
     instagram: SocialLink;
-    // Extendable - add more social links here as needed
 };
 
 export interface Project {
@@ -29,11 +28,11 @@ export interface Project {
     // Experience-specific fields
     position?: string;
     type?:
-        | "fulltime"
-        | "contract"
-        | "internship"
-        | "freelance"
-        | "personal project";
+    | "fulltime"
+    | "contract"
+    | "internship"
+    | "freelance"
+    | "personal project";
     startDate?: string;
     endDate?: string;
     isPersonalProject?: boolean;
@@ -62,6 +61,7 @@ export interface Certification {
         endDate: string;
         description: string;
         logo: string;
+        certificationImage?: string;
     }[];
     title: string;
     subtitle: string;
@@ -350,6 +350,7 @@ export const config: Config = {
                 description:
                     "Studied calligraphy and eastern philosophy before dropping out. Later credited this experience with inspiring Apple's typography.",
                 logo: "/logo/fcc.png",
+                certificationImage: "/certification/freecodecamp.png"
             },
             {
                 platform: "Skill Training Nepal",
@@ -360,6 +361,18 @@ export const config: Config = {
                 description:
                     "Studied calligraphy and eastern philosophy before dropping out. Later credited this experience with inspiring Apple's typography.",
                 logo: "/logo/skill.png",
+                certificationImage: "/certification/skilltraningnepal.png"
+            },
+            {
+                platform: "Simpli Learn",
+                degree: "Docker",
+                certificateLink: "https://simpli-web.app.link/e/AvGjWCuyQSb",
+                startDate: "1972",
+                endDate: "1974",
+                description:
+                    "Gained hands-on experience in containerization, Docker CLI, image and container management, Docker Compose, and deploying scalable applications using Docker best practices",
+                logo: "/logo/simplilearn.png",
+                certificationImage: "/certification/simplelearn.png"
             },
         ],
         title: "Certifications",
