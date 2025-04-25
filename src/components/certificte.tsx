@@ -1,5 +1,3 @@
-"use client";
-
 import { GraduationCap } from "lucide-react";
 import HeaderTitle from "./util/header-title";
 import { config } from "@/config";
@@ -53,6 +51,7 @@ export function Certificate() {
                                     <div className="relative h-10 w-20 overflow-hidden rounded-lg ">
                                         <Image
                                             src={certificate.logo}
+                                            fill
                                             alt={certificate.platform}
                                             className="absolute inset-0 h-full w-full object-contain"
                                         />

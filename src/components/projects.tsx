@@ -63,6 +63,7 @@ export function Projects() {
                     <Image
                       src={project.image || ""}
                       alt={project.title}
+                      fill
                       loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover"
                     />
