@@ -128,7 +128,7 @@ export const config: Config = {
             ariaLabel: "GitHub",
         },
         linkedin: {
-            url: "https://linkedin.com/in/prabinmoktan",
+            url: "https://www.linkedin.com/in/prabin-moktan-832329309/",
             ariaLabel: "LinkedIn",
         },
         instagram: {
