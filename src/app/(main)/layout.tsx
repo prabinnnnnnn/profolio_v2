@@ -36,19 +36,14 @@ export default function RootLayout({
 
     return (
         <html
-            lang="en"
-            className="w-screen  dark"
-            suppressHydrationWarning={true}
-        >
+            lang="en" className="w-screen  dark" suppressHydrationWarning={true}>
             <head>
+                <meta name="theme-color" content="#000000" />
                 <link rel="icon" href="/logo/circle.svg" sizes="any" />
             </head>
             <ReactLenis root options={lenisOptions}>
                 <ThemeProvider>
-                    <body
-                        className={`${inter.className} antialiased relative w-full h-fit`}
-                        cz-shortcut-listen="true"
-                    >
+                    <body className={`${inter.className} antialiased relative w-full h-fit`} cz-shortcut-listen="true">
                         <Navbar />
                         <MobileNavbar />
                         <ScrollToHash />
