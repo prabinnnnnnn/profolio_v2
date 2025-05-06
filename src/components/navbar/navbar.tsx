@@ -10,6 +10,7 @@ import { links } from "./links";
 import { config } from "@/config";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
+import Image from "next/image";
 
 export default function Navbar() {
     const [isCompressed, setIsCompressed] = useState(false);
@@ -129,7 +130,7 @@ export default function Navbar() {
     }, [isCompressed]);
 
     return (
-        <div
+        <nav
             className={cn(
                 "top-0 fixed flex justify-center z-50 px-8  w-full min-h-[76px] max-md:hidden ",
                 !isCompressed && "border-b",
@@ -152,19 +153,17 @@ export default function Navbar() {
                     <Link href={"/"}>
                         <div
                             className={cn(
-                                "bg-red-900 bg-opacity-50 backdrop-blur-sm rounded-full size-[40px] flex items-center justify-center text-secondary relative overflow-clip",
+                                "rounded-full border size-[40px] flex items-center justify-center text-secondary relative overflow-clip",
                                 isCompressed && "size-[30px]",
                             )}
                             id="companyLogo"
                         >
-                            <Avatar>
-                                <AvatarImage
-                                    src="/logo/circle.svg"
-                                    sizes="24px"
-                                    aria-label="logo"
+
+                                  <Image  src="/logo/Whitelogo.svg"
+                                    fill
+                                    className="object-cover scale-200"
+                                    alt="logo"
                                 />
-                                <AvatarFallback>Logo</AvatarFallback>
-                            </Avatar>
                         </div>
                     </Link>
 
@@ -237,6 +236,6 @@ export default function Navbar() {
                     )}
                 </div>
             </motion.div>
-        </div>
+        </nav>
     );
 }

@@ -14,20 +14,17 @@ export type SocialLinks = {
 
 export interface Project {
     title: string;
-    description: string | ReactNode;
-    bullets: ReactNode[];
-    date?: string;
-    image?: string | undefined;
-    tags?: string[] | undefined;
-    slug?: string;
-    company?: string;
-    link?: {
+    description: string;
+    bullets: string[];
+    tags: string[]
+    company: string;
+    image: string
+    link: {
         label: string;
         href: string;
     };
-    // Experience-specific fields
     position?: string;
-    type?:
+    type:
     | "fulltime"
     | "contract"
     | "internship"
@@ -35,7 +32,6 @@ export interface Project {
     | "personal project";
     startDate?: string;
     endDate?: string;
-    isPersonalProject?: boolean;
 }
 
 export interface Education {
@@ -177,6 +173,10 @@ export const config: Config = {
             type: "personal project",
             startDate: "2021",
             endDate: "2021",
+            link: {
+                label: "View Portfolio",
+                href: "https://your-portfolio-link.com",
+            },
         },
         {
             title: "E-commerce Store",
@@ -195,6 +195,10 @@ export const config: Config = {
             type: "internship",
             startDate: "2021",
             endDate: "2022",
+            link: {
+                label: "View Portfolio",
+                href: "https://your-portfolio-link.com",
+            },
         },
 
         {
@@ -214,6 +218,10 @@ export const config: Config = {
             type: "personal project",
             startDate: "2020",
             endDate: "Present",
+            link: {
+                label: "View Portfolio",
+                href: "https://your-portfolio-link.com",
+            },
         },
     ],
     education: {

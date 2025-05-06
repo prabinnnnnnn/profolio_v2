@@ -6,9 +6,7 @@ import HeaderTitle from "./util/header-title";
 
 export const Experience = () => {
   // Filter projects that are work experience (not personal projects)
-  const workExperience = config.projects.filter(
-    (project) => !project.isPersonalProject
-  );
+  const workExperience = config.projects
 
   return (
     <div className="py-12 md:py-32 px-4 w-full" id="experience">

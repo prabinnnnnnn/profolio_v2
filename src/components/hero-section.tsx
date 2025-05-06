@@ -29,7 +29,6 @@ const transitionVariants = {
 
 export default function HeroSection() {
   return (
-    <>
       <main className="overflow-hidden">
         <div
           aria-hidden
@@ -42,41 +41,6 @@ export default function HeroSection() {
         {/* header and image */}
         <section>
           <div className="relative pt-24 md:pt-11">
-            <AnimatedGroup
-              variants={{
-                container: {
-                  visible: {
-                    transition: {
-                      delayChildren: 1,
-                    },
-                  },
-                },
-                item: {
-                  hidden: {
-                    opacity: 0,
-                    y: 20,
-                  },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      type: "spring",
-                      bounce: 0.3,
-                      duration: 2,
-                    },
-                  },
-                },
-              }}
-              className="absolute inset-0 -z-20"
-            >
-              <Image
-                src="https://res.cloudinary.com/dg4jhba5c/image/upload/v1741605538/night-background_ni3vqb.jpg"
-                alt="background"
-                className="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 dark:block"
-                width="3276"
-                height="4095"
-              />
-            </AnimatedGroup>
             <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"></div>
             <div className="mx-auto max-w-7xl">
               <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
@@ -121,7 +85,7 @@ export default function HeroSection() {
                 />
                 <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
                   <Image
-                    className="bg-background aspect-15/8 relative hidden rounded-2xl object-cover  dark:block"
+                    className="bg-background aspect-15/8 relative  rounded-2xl object-cover  dark:block"
                     src={config.hero.backgroundImage || ""}
                     alt="app screen"
                     width="2700"
@@ -134,6 +98,5 @@ export default function HeroSection() {
           </div>
         </section>
       </main>
-    </>
   );
 }

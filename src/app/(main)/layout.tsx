@@ -17,9 +17,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: `${config.name} | Mern Stack Developer`,
+    title: `${config.name} Moktan | Mern Stack Developer`,
     description:
         "I'm a mern stack developer with a passion for building web applications.",
+    keywords: "prabinmoktan, prabin moktan,prabinnnnn_,prabinnnnnnn,mern stack developer, MERN Develeoper",
+    robots: "index, follow",
+    metadataBase: new URL("https://www.prabinmoktan.com.np"), 
+    authors: [
+        {
+            name: "Prabin Moktan",
+            url: "https://prabinmoktan.com.np",
+        },
+    ],
 };
 
 export default function RootLayout({
@@ -39,7 +48,7 @@ export default function RootLayout({
             lang="en" className="w-screen  dark" suppressHydrationWarning={true}>
             <head>
                 <meta name="theme-color" content="#000000" />
-                <link rel="icon" href="/logo/circle.svg" sizes="any" />
+                <link rel="icon" href="/logo/BlackIcon.png" sizes="any" type="image/x-icon" />
             </head>
             <ReactLenis root options={lenisOptions}>
                 <ThemeProvider>
