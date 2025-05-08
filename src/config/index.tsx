@@ -114,7 +114,7 @@ export const config: Config = {
     name: "Prabin",
     contactEmail: "mprabintamang@gmai.com",
     hero: {
-        title: "Hi, I'm Prabin",
+        title: "Hi, I'm Prabin Moktan",
         subtitle: "I build things that are insanely great",
         backgroundImage: "/hero.png",
     },

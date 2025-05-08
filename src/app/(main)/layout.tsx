@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
     title: `${config.name} Moktan | Mern Stack Developer`,
     description:
-        "I'm a mern stack developer with a passion for building web applications.",
+        "I'm a prabin moktan, a mern stack developer with a passion for building web applications.",
     keywords: "prabinmoktan, prabin moktan,prabinnnnn_,prabinnnnnnn,mern stack developer, MERN Develeoper",
     robots: "index, follow",
     metadataBase: new URL("https://www.prabinmoktan.com.np"), 
