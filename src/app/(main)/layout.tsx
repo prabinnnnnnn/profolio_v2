@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: `${config.name} Moktan | Mern Stack Developer`,
+    title: `${config.name} Moktan | Building Fast, Modern Web Apps with the MERN Stack`,
     description:
         "I'm a prabin moktan, a mern stack developer with a passion for building web applications.",
     keywords: "prabinmoktan, prabin moktan,prabinnnnn_,prabinnnnnnn,mern stack developer, MERN Develeoper",
