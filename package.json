@@ -1,12 +1,14 @@
 {
   "name": "repo",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "npx next-sitemap --config next-sitemap.config.mjs"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "github:icons-pack/react-simple-icons",

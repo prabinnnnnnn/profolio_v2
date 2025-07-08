@@ -1,9 +1,9 @@
 "use client";
-import Skills from "@/components/features-1";
+import Skills from "@/components/features";
 import HeroSection from "@/components/hero-section";
 import { Certificate } from "@/components/certificte";
-import Testimonials from "@/components/testimonials";
 import { Projects } from "@/components/projects";
+import { Skill } from "@/components/development-skills";
 
 export default function Home() {
     return (
@@ -12,8 +12,7 @@ export default function Home() {
             <Skills />
             <Projects />
             <Certificate />
-            <Testimonials />
-            {/* <Experience /> */}
+            <Skill/>
         </div>
     );
 }

@@ -3,17 +3,17 @@
 import { Button } from "@/components/ui/button";
 import { Drawer, DrawerContent, DrawerTitle } from "@/components/ui/drawer";
 import { cn } from "@/lib/utils";
-import { useTheme } from "@/providers/theme-context";
 import { motion } from "framer-motion";
-import { Menu, Moon, Phone, Sun, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { links } from "./links";
 import { config } from "@/config";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function MobileNavbar() {
     const [hasScrolled, setHasScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-    const { theme, toggleTheme } = useTheme();
     useEffect(() => {
         document.addEventListener("scroll", function () {
             if (window.scrollY > 50 || document.location.hash) {
@@ -47,13 +47,22 @@ export default function MobileNavbar() {
                 )}
             >
                 <div className="flex items-center gap-2">
+                    <Link href={"/"}>
+                        <div className={cn("rounded-full border size-[40px] flex items-center justify-center text-secondary relative overflow-clip",)} id="companyLogo">
+                            <Image src="/logo/Whitelogo.svg"
+                                fill
+                                className="object-cover scale-200"
+                                alt="logo"
+                                title="logo"
+                            />
+                        </div>
+                    </Link>
                     <motion.span
                         className={cn(hasScrolled && "")}
                         id="companyName"
                     >
-                        with{" "}
                         <motion.span className="font-bold not-italic">
-                            {config.name}
+                            { config.name}
                         </motion.span>
                     </motion.span>
                 </div>

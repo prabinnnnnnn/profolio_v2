@@ -1,7 +1,5 @@
 import {
-    HomeIcon,
     BriefcaseIcon,
-    GraduationCapIcon,
     MessageSquareIcon,
     WrenchIcon,
 } from "lucide-react";

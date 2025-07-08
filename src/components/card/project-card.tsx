@@ -31,6 +31,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 <Image
                     src={project.image}
                     alt={project.title}
+                    title={project.title + ' Project'}
                     width="2700"
                     height="1440"
                     className="w-full h-full grayscale "
@@ -71,7 +72,6 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                         <div className="flex items-center text-sm text-slate-500">
                             <Briefcase className="h-4 w-4 mr-2 text-slate-400" />
                             <span>{project.company}</span>
-                            {/* {project.type && <span className="text-slate-400 ml-1">· {project.type}</span>} */}
                         </div>
                     )}
 

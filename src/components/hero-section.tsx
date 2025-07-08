@@ -1,6 +1,4 @@
 import React from "react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 import { AnimatedGroup } from "./ui/animated-group";
@@ -88,9 +86,11 @@ export default function HeroSection() {
                     className="bg-background aspect-15/8 relative  rounded-2xl object-cover  dark:block"
                     src={config.hero.backgroundImage || ""}
                     alt="app screen"
+                    title={config.name}
                     width="2700"
                     height="1440"
                     priority
+                    draggable='false'
                   />
                 </div>
               </div>

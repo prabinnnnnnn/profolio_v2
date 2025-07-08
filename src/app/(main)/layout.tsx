@@ -17,11 +17,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: `${config.name} Moktan | Building Fast, Modern Web Apps with the MERN Stack`,
+
+    title: `${config.name} Moktan | Mern Stack Developer, Building Modern Web Experiences`,
     description:
         "I'm a prabin moktan, a mern stack developer with a passion for building web applications.",
     keywords: "prabinmoktan, prabin moktan,prabinnnnn_,prabinnnnnnn,mern stack developer, MERN Develeoper",
     robots: "index, follow",
+    alternates:{
+        canonical:"https://prabinmoktan.com.np/",
+    },
+    publisher: '',
     metadataBase: new URL("https://www.prabinmoktan.com.np"), 
     authors: [
         {
@@ -44,15 +49,14 @@ export default function RootLayout({
     };
 
     return (
-        <html
-            lang="en" className="w-screen  dark" suppressHydrationWarning={true}>
+        <html lang="en" className="w-screen  dark" >
             <head>
                 <meta name="theme-color" content="#000000" />
                 <link rel="icon" href="/logo/BlackIcon.png" sizes="any" type="image/x-icon" />
             </head>
             <ReactLenis root options={lenisOptions}>
                 <ThemeProvider>
-                    <body className={`${inter.className} antialiased relative w-full h-fit`} cz-shortcut-listen="true">
+                    <body className={`${inter.className} antialiased relative w-full h-fit`}>
                         <Navbar />
                         <MobileNavbar />
                         <ScrollToHash />

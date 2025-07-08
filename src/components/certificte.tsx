@@ -53,6 +53,7 @@ export function Certificate() {
                                             src={certificate.logo}
                                             fill
                                             alt={certificate.platform}
+                                            title={certificate.platform}
                                             className="absolute inset-0 h-full w-full object-contain"
                                         />
                                     </div>

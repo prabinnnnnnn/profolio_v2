@@ -1,21 +1,17 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useTheme } from "@/providers/theme-context";
-
 import { motion, useAnimate } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { links } from "./links";
 import { config } from "@/config";
-import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 import Image from "next/image";
 
 export default function Navbar() {
     const [isCompressed, setIsCompressed] = useState(false);
     const [scope, animate] = useAnimate();
-    const { theme, toggleTheme } = useTheme();
 
     useEffect(() => {
         document.addEventListener("scroll", function () {
@@ -29,7 +25,6 @@ export default function Navbar() {
 
     const [mainContentOffset, setMainContentOffset] = useState(0);
 
-    // add a side effect such that on page load, and when the window is resized,  the it computes the difference in width between the left and right sections, and stores it in mainContentOffset
     useEffect(() => {
         const leftSection = scope.current.querySelector("#left-section");
         const rightSection = scope.current.querySelector("#right-section");
@@ -65,20 +60,8 @@ export default function Navbar() {
                 },
             );
 
-            // animate the company name to disappear when the navbar is compressed
-            animate(
-                scope.current.querySelector("#companyName"),
-                {
-                    display: "none",
-                    width: "0",
-                },
-                {
-                    ...transitionOptions,
-                    duration: 0.1,
-                },
-            );
 
-            // animate the company logo to spin 360 degrees when the navbar is expanded
+
             animate(
                 scope.current.querySelector("#companyLogo"),
                 {
@@ -111,18 +94,6 @@ export default function Navbar() {
                 },
             );
 
-            // animate the company name to show up after the navbar is expanded
-            animate(
-                scope.current.querySelector("#companyName"),
-                {
-                    display: "block",
-                    width: "auto",
-                },
-                {
-                    ...transitionOptions,
-                    duration: 0.1,
-                },
-            );
         }
 
         if (isCompressed) animateCompressed();
@@ -131,11 +102,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={cn(
-                "top-0 fixed flex justify-center z-50 px-8  w-full min-h-[76px] max-md:hidden ",
-                !isCompressed && "border-b",
-            )}
-        >
+            className={cn("top-0 fixed flex justify-center z-50 px-8  w-full min-h-[76px] max-md:hidden", !isCompressed && "border-b",)}>
             <motion.div
                 id="main-nav-content"
                 className={cn(
@@ -151,31 +118,15 @@ export default function Navbar() {
             >
                 <div className="flex items-center gap-4" id="left-section">
                     <Link href={"/"}>
-                        <div
-                            className={cn(
-                                "rounded-full border size-[40px] flex items-center justify-center text-secondary relative overflow-clip",
-                                isCompressed && "size-[30px]",
-                            )}
-                            id="companyLogo"
-                        >
-
-                                  <Image  src="/logo/Whitelogo.svg"
-                                    fill
-                                    className="object-cover scale-200"
-                                    alt="logo"
-                                />
+                        <div className={cn("rounded-full border size-[40px] flex items-center justify-center text-secondary relative overflow-clip",)} id="companyLogo">
+                            <Image src="/logo/Whitelogo.svg"
+                                fill
+                                className="object-cover scale-200"
+                                alt="logo"
+                                title="logo"
+                            />
                         </div>
                     </Link>
-
-                    <motion.span
-                        className={cn(isCompressed && "")}
-                        id="companyName"
-                    >
-                        <p className="inline text-sm mr-2">with</p>
-                        <motion.span className="font-medium not-italic">
-                            {config.name}
-                        </motion.span>
-                    </motion.span>
                 </div>
 
                 <div
@@ -199,7 +150,7 @@ export default function Navbar() {
                                 key={link.name}
                                 className="mx-auto w-full font-medium text-foreground/80"
                             >
-                                <Link href={link.href}>{link.name}</Link>
+                                <Link href={link.href} aria-label={link.name} title={link.name}>{link.name}</Link>
                             </li>
                         ))}
                     </motion.ul>

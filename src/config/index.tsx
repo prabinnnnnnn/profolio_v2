@@ -80,6 +80,11 @@ export interface Skills {
     icon: ReactNode;
 }
 
+export interface DevelopmentSkills {
+    title: string;
+    image: string
+}
+
 export type Config = {
     name: string;
     contactEmail: string;
@@ -105,6 +110,7 @@ export type Config = {
         title: string;
         subtitle: string;
     };
+    developmentSkills: DevelopmentSkills[];
     contact: Contact;
     certifications: Certification;
 };
@@ -118,6 +124,7 @@ export const config: Config = {
         subtitle: "I build things that are insanely great",
         backgroundImage: "/hero.png",
     },
+
     social: {
         github: {
             url: "https://github.com/prabinnnnnnn",
@@ -345,6 +352,16 @@ export const config: Config = {
         subtitle:
             "I'm always looking for new challenges and opportunities to grow. Let's connect and see how we can make something great together.",
     },
+    developmentSkills: [
+        { title: 'GitHub', image: '/skills/github.png' },
+        { title: 'Css', image: '/skills/css.png' },
+        { title: 'docker', image: '/skills/docker.png' },
+        { title: 'git', image: '/skills/git.png' },
+        { title: 'html', image: '/skills/html.png' },
+        { title: 'mysql', image: '/skills/mysql.png' },
+        { title: 'nodejs', image: '/skills/nodejs.png' },
+        { title: 'react', image: '/skills/react.png' },
+    ],
 
     certifications: {
         items: [

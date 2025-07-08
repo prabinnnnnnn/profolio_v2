@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://prabindmoktan.com.np/
+
+# Sitemaps
+Sitemap: https://prabindmoktan.com.np/sitemap.xml
