@@ -19,7 +19,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
 
-    title: `${config.name} Moktan | Mern Stack Developer, Building Modern Web Experiences`,
+    title: `Prabin Moktan | Mern Stack Developer, Building Modern Web Experiences`,
     description:
         "I'm a prabin moktan, a mern stack developer with a passion for building web applications.",
     keywords: "prabinmoktan, prabin moktan,prabinnnnn_,prabinnnnnnn,mern stack developer, MERN Develeoper",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://prabinmoktan.com.np/",
     },
-    publisher: '',
+    publisher: 'Prabin Moktan',
     metadataBase: new URL("https://www.prabinmoktan.com.np"),
     authors: [
         {
