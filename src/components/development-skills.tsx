@@ -9,7 +9,7 @@ export const Skill = () => {
     const developmentSkills = config.developmentSkills
 
     return (
-        <section className="py-12 md:py-32 px-4 w-full " id="experience">
+        <section className="py-12 md:py-32 px-4 w-full " id="skills">
             <div className=" container mx-auto">
                 <HeaderTitle className="mb-8 text-center">Development Skills</HeaderTitle>
                 <div className="relative flex  flex-col items-center gap-x-6 space-x-7 justify-center overflow-hidden">

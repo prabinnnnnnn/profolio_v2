@@ -34,13 +34,13 @@ export default function MobileNavbar() {
     };
 
     return (
-        <div
+        <aside
             className={cn(
                 "top-0 fixed inset-x-0 md:hidden w-full transition-all duration-500 ease-in-out z-50",
                 hasScrolled && "bg-black bg-opacity-20 backdrop-blur-xl",
             )}
         >
-            <div
+            <nav
                 className={cn(
                     "flex justify-between items-center px-8 py-4 transition-all duration-500 ease-in-out",
                     !hasScrolled && "border-b",
@@ -62,7 +62,7 @@ export default function MobileNavbar() {
                         id="companyName"
                     >
                         <motion.span className="font-bold not-italic">
-                            { config.name}
+                            {config.name}
                         </motion.span>
                     </motion.span>
                 </div>
@@ -118,7 +118,7 @@ export default function MobileNavbar() {
                         </DrawerContent>
                     </Drawer>
                 </div>
-            </div>
-        </div>
+            </nav>
+        </aside>
     );
 }

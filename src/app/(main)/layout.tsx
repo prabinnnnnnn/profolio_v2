@@ -11,6 +11,7 @@ import MobileNavbar from "@/components/navbar/mobile-navbar";
 import Footer from "@/components/footer";
 
 import { config } from "@/config";
+import SchemaLD from "@/config/schema";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -23,11 +24,11 @@ export const metadata: Metadata = {
         "I'm a prabin moktan, a mern stack developer with a passion for building web applications.",
     keywords: "prabinmoktan, prabin moktan,prabinnnnn_,prabinnnnnnn,mern stack developer, MERN Develeoper",
     robots: "index, follow",
-    alternates:{
-        canonical:"https://prabinmoktan.com.np/",
+    alternates: {
+        canonical: "https://prabinmoktan.com.np/",
     },
     publisher: '',
-    metadataBase: new URL("https://www.prabinmoktan.com.np"), 
+    metadataBase: new URL("https://www.prabinmoktan.com.np"),
     authors: [
         {
             name: "Prabin Moktan",
@@ -53,6 +54,7 @@ export default function RootLayout({
             <head>
                 <meta name="theme-color" content="#000000" />
                 <link rel="icon" href="/logo/BlackIcon.png" sizes="any" type="image/x-icon" />
+                <SchemaLD />
             </head>
             <ReactLenis root options={lenisOptions}>
                 <ThemeProvider>

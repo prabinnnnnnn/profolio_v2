@@ -1,0 +1,77 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://prabinmoktan.com.np.com#me",
+    "name": "Prabin Moktan",
+    "url": "https://prabinmoktan.com.np/",
+    "email": "mailto:mprabintamang@gmai.com",
+    "image": "https://prabinmoktan.com.np/hero.png",
+    "jobTitle": "Mern Stack Developer",
+    "sameAs": [
+        "https://github.com/prabinnnnnnn",
+        "https://www.linkedin.com/in/prabin-moktan-832329309/",
+        "https://www.instagram.com/prabinnnnn_"
+    ],
+    "description": "I build things that are insanely great. Full-stack web developer with hands-on experience in React, Node.js, MongoDB, and more.",
+    "alumniOf": [
+        {
+            "@type": "EducationalOrganization",
+            "name": "Free Code Camp",
+            "sameAs": "https://www.freecodecamp.org"
+        },
+        {
+            "@type": "EducationalOrganization",
+            "name": "Skill Training Nepal"
+        }
+    ],
+    "hasCredential": [
+        {
+            "@type": "EducationalOccupationalCredential",
+            "name": "JavaScript Algorithms and Data Structures",
+            "recognizedBy": {
+                "@type": "Organization",
+                "name": "Free Code Camp"
+            },
+            "url": "https://www.freecodecamp.org/certification/prabinmoktan/javascript-algorithms-and-data-structures-v8"
+        },
+        {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Docker",
+            "recognizedBy": {
+                "@type": "Organization",
+                "name": "Simpli Learn"
+            },
+            "url": "https://simpli-web.app.link/e/AvGjWCuyQSb"
+        }
+    ],
+    "hasPart": [
+        {
+            "@type": "CreativeWork",
+            "name": "My Portfolio",
+            "url": "https://prabinmoktan.com.np",
+            "description": "A showcase of my work as a web developer, featuring projects like a music player app and an e-commerce platform.",
+            "thumbnailUrl": "https://prabinmoktan.com.np/project/portfolio.png"
+        },
+        {
+            "@type": "CreativeWork",
+            "name": "Web Music Player",
+            "url": "https://prabinmoktan.com.np",
+            "description": "A web-based music player that allows users to stream and play music tracks.",
+            "thumbnailUrl": "https://prabinmoktan.com.np/project/music.webp"
+        },
+        {
+            "@type": "CreativeWork",
+            "name": "E-commerce Store",
+            "url": "https://prabinmoktan.com.np",
+            "description": "An e-commerce platform where users can browse and purchase items online.",
+            "thumbnailUrl": "https://prabinmoktan.com.np/project/ecomers.png"
+        },
+        {
+            "@type": "CreativeWork",
+            "name": "Personal Blog",
+            "url": "https://prabinmoktan.com.np",
+            "description": "A blog where I share my thoughts on web development, design, and technology.",
+            "thumbnailUrl": "https://prabinmoktan.com.np/project/blog.webp"
+        }
+    ]
+}

@@ -27,8 +27,8 @@ export const links: Link[] = [
         icon: <MessageSquareIcon className="size-4" />,
     },
     {
-        name: "Testimonials",
-        href: "#testimonials",
+        name: "Skills",
+        href: "#skills",
         icon: <MessageSquareIcon className="size-4" />,
     },
 ];
