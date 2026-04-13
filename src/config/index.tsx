@@ -141,20 +141,19 @@ export const config: Config = {
     },
     projects: [
         {
-            title: "My Portfolio",
+            title: "Repair Management",
             description:
                 "A showcase of my work as a web developer, featuring projects like a music player app and an e-commerce platform built with React, Node.js, and MongoDB.",
             bullets: [
-                "Designed and developed a personal portfolio to highlight my projects and skills",
-                "Showcased real-world applications, including a music player and e-commerce platform",
-                "Implemented a clean, responsive UI with smooth navigation",
-                "Integrated project links, descriptions, and a contact section",
+                "Built a multi-role frontend in Next.js with separate dashboards for customers and repair shop providers, consuming Java Spring Boot REST APIs.",
+                "Developed a service browsing and search interface enabling customers to discover and compare gadget repair services across multiple shops",
+                "Implemented a booking and scheduling system on the frontend, allowing customers to book repair appointments and track service status in real time.",
             ],
-            company: "Personal Project",
-            image: "/project/portfolio.png",
-            tags: ["React", "Node.js", "MongoDB", "Web Development"],
-            position: "Full-Stack Developer",
-            type: "personal project",
+            company: "Company Project",
+            image: "/project/grm.png",
+            tags: ["Next.js", "Node.js", "Postgres", "REST APIs", "Java", "Spring Boot"],
+            position: "Web Developer",
+            type: "fulltime",
             startDate: "2025",
             endDate: "Present",
             link: {
