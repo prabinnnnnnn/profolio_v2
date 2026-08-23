@@ -10,6 +10,7 @@ export type SocialLinks = {
     github: SocialLink;
     linkedin: SocialLink;
     instagram: SocialLink;
+    gmail: SocialLink;
 };
 
 export interface Project {
@@ -138,33 +139,14 @@ export const config: Config = {
             url: "https://www.instagram.com/prabinnnnn_",
             ariaLabel: "Instagram",
         },
+        gmail: {
+            url: "mailto:mprabintamang@gmail.com",
+            ariaLabel: "Mail",
+        },
     },
     projects: [
         {
-            title: "My Portfolio",
-            description:
-                "A showcase of my work as a web developer, featuring projects like a music player app and an e-commerce platform built with React, Node.js, and MongoDB.",
-            bullets: [
-                "Designed and developed a personal portfolio to highlight my projects and skills",
-                "Showcased real-world applications, including a music player and e-commerce platform",
-                "Implemented a clean, responsive UI with smooth navigation",
-                "Integrated project links, descriptions, and a contact section",
-            ],
-            company: "Personal Project",
-            image: "/project/portfolio.png",
-            tags: ["React", "Node.js", "MongoDB", "Web Development"],
-            position: "Full-Stack Developer",
-            type: "personal project",
-            startDate: "2025",
-            endDate: "Present",
-            link: {
-                label: "View Portfolio",
-                href: "https://your-portfolio-link.com",
-            },
-        },
-
-        {
-            title: "Web Music Player",
+            title: "Kathmandu Infotech",
             description:
                 "A web-based music player that allows users to stream and play music tracks.",
             bullets: [
@@ -173,43 +155,42 @@ export const config: Config = {
                 "Created a custom audio player with playback controls and volume adjustments",
                 "Optimized for performance, reducing load times for better user experience",
             ],
-            company: "Freelance",
-            image: "/project/music.webp",
-            tags: ["JavaScript", "Web Audio API", "CSS", "Frontend"],
-            position: "Frontend Developer",
-            type: "personal project",
+            company: "Project",
+            image: "/project/kit.png",
+            tags: ["Next js", "express", "Mysql", "Redux", "Framer Motion"],
+            position: "Web Developer",
+            type: "fulltime",
             startDate: "2021",
             endDate: "2021",
             link: {
                 label: "View Portfolio",
-                href: "https://your-portfolio-link.com",
+                href: "https://Kathmanduinfotech.com",
             },
         },
         {
-            title: "E-commerce Store",
+            title: "Gamitech",
             description:
-                "An e-commerce platform where users can browse and purchase items online.",
+                "An e-commerce platform where gaming products can browse and purchase items online.",
             bullets: [
                 "Implemented a full-featured product catalog with search and filter options",
-                "Integrated payment gateways such as Stripe for seamless transactions",
                 "Created an admin dashboard for managing products and orders",
                 "Optimized user experience for both desktop and mobile devices",
             ],
-            company: "Freelance",
-            image: "/project/ecomers.png",
-            tags: ["React", "Node.js", "MongoDB", "Tailwind"],
+            company: "Project",
+            image: "/project/gamitech.png",
+            tags: ["Next js", "Mysql", "Django", "Redux", "Framer Motion", "Gsap"],
             position: "Full-Stack Developer",
-            type: "internship",
+            type: "fulltime",
             startDate: "2021",
             endDate: "2022",
             link: {
-                label: "View Portfolio",
-                href: "https://your-portfolio-link.com",
+                label: "View in Portfolio",
+                href: "https://gemitech.vercel.app/",
             },
         },
 
         {
-            title: "Personal Blog",
+            title: "Blog Website",
             description:
                 "A blog where I share my thoughts on web development, design, and technology.",
             bullets: [
@@ -218,16 +199,16 @@ export const config: Config = {
                 "Optimized for performance and SEO",
                 "Integrated social media sharing buttons",
             ],
-            company: "Freelance",
-            image: "/project/blog.webp",
-            tags: ["Node.js", "Next js", "SEO", "Tailwind"],
-            position: "Developer & Designer",
+            company: "internship",
+            image: "/project/skilltechnepal.png",
+            tags: ["Node.js", "Next js", "SEO", "MongoDb", "Express"],
+            position: "Full-stack Developer & Designer",
             type: "personal project",
             startDate: "2020",
             endDate: "Present",
             link: {
                 label: "View Portfolio",
-                href: "https://your-portfolio-link.com",
+                href: "https://skilltechnepal.com",
             },
         },
     ],

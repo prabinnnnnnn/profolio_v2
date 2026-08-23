@@ -8,6 +8,7 @@ import { links } from "./links";
 import { config } from "@/config";
 import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 import Image from "next/image";
+import { LucideMail } from "lucide-react";
 
 export default function Navbar() {
     const [isCompressed, setIsCompressed] = useState(false);
@@ -182,6 +183,14 @@ export default function Navbar() {
                                 title={config.social.instagram.ariaLabel}
                             >
                                 <SiInstagram className="transition-colors size-5" />
+                            </Link>
+                            <Link
+                                href={config.social.gmail.url}
+                                target="_blank"
+                                aria-label={config.social.gmail.ariaLabel}
+                                title={config.social.gmail.ariaLabel}
+                            >
+                                <LucideMail  className="transition-colors size-5" />
                             </Link>
                         </div>
                     )}
