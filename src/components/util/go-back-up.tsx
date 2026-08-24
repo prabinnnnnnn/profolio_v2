@@ -1,8 +1,7 @@
 "use client";
 
-import { useTheme } from "@/providers/theme-context";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronUp, MoonIcon, SunIcon } from "lucide-react";
+import { ChevronUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function GoBackUp() {

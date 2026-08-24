@@ -1,8 +1,8 @@
 
-import React from "react";
 import { ArrowUpRight, Calendar, Briefcase, User } from "lucide-react";
 import Tag from "./tag";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProjectCardProps {
     project: {
@@ -16,7 +16,7 @@ interface ProjectCardProps {
         type?: string;
         startDate?: string;
         endDate?: string;
-        link?: {
+        link: {
             href: string;
             label: string
         }
@@ -26,7 +26,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
     return (
-        <div className="group rounded-lg overflow-hidden border hover:shadow-md transition-all duration-300">
+        <Link href={project.link.href} target="_blank" className="overflow-hidden transition-all duration-300 border rounded-lg group hover:shadow-md">
             <div className="relative aspect-auto ">
                 <Image
                     src={project.image}
@@ -37,24 +37,23 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     className="w-full h-full grayscale "
                 />
             </div>
-            <div className="p-6 col-span-2">
-                <div className="flex justify-between items-start">
-                    <h3 className="text-xl font-semibold leading-tight mb-2 text-muted-foreground">{project.title}</h3>
-                    <a
-                        href={project.link?.href}
-                        className="text-slate-600 hover:text-slate-900 transition-colors p-1 rounded-full hover:bg-slate-100"
+            <div className="col-span-2 p-6">
+                <div className="flex items-start justify-between">
+                    <h3 className="mb-2 text-xl font-semibold leading-tight text-muted-foreground">{project.title}</h3>
+                    <div
+                        className="p-1 transition-colors rounded-full text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                         aria-label="View project"
                     >
-                        <ArrowUpRight className="h-5 w-5" />
-                    </a>
+                        <ArrowUpRight className="w-5 h-5" />
+                    </div>
                 </div>
-                <p className="text-slate-600 mb-4">{project.description}</p>
+                <p className="mb-4 text-slate-600">{project.description}</p>
 
                 {project.bullets.length > 0 && (
                     <ul className="mb-4 space-y-1">
                         {project.bullets.map((bullet: string, index: number) => (
-                            <li key={index} className="text-sm text-slate-600 flex items-start">
-                                <span className="mr-2 text-slate-400 mt-1">•</span>
+                            <li key={index} className="flex items-start text-sm text-slate-600">
+                                <span className="mt-1 mr-2 text-slate-400">•</span>
                                 <span>{bullet}</span>
                             </li>
                         ))}
@@ -67,24 +66,24 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     ))}
                 </div>
 
-                <div className="pt-4 border-t border-muted-foreground mt-4 flex flex-col gap-2">
+                <div className="flex flex-col gap-2 pt-4 mt-4 border-t border-muted-foreground">
                     {project.company && (
                         <div className="flex items-center text-sm text-slate-500">
-                            <Briefcase className="h-4 w-4 mr-2 text-slate-400" />
+                            <Briefcase className="w-4 h-4 mr-2 text-slate-400" />
                             <span>{project.company}</span>
                         </div>
                     )}
 
                     {project.position && (
                         <div className="flex items-center text-sm text-slate-500">
-                            <User className="h-4 w-4 mr-2 text-slate-400" />
+                            <User className="w-4 h-4 mr-2 text-slate-400" />
                             <span>{project.position}</span>
                         </div>
                     )}
 
                     {(project.startDate || project.endDate) && (
                         <div className="flex items-center text-sm text-slate-500">
-                            <Calendar className="h-4 w-4 mr-2 text-slate-400" />
+                            <Calendar className="w-4 h-4 mr-2 text-slate-400" />
                             <span>
                                 {project.startDate}
                                 {project.endDate && project.startDate !== project.endDate && ` - ${project.endDate}`}
@@ -93,7 +92,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     )}
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

@@ -148,22 +148,24 @@ export const config: Config = {
         {
             title: "Kathmandu Infotech",
             description:
-                "A web-based music player that allows users to stream and play music tracks.",
+                "A modern, responsive company website designed to showcase Kathmandu Infotech's services, projects, and digital solutions with a smooth and engaging user experience.",
             bullets: [
-                "Built using HTML5, CSS3, and JavaScript for seamless media playback",
-                "Implemented a playlist feature to let users create custom music queues",
-                "Created a custom audio player with playback controls and volume adjustments",
-                "Optimized for performance, reducing load times for better user experience",
+                "Developed a responsive and modern website using Next.js for improved performance and SEO",
+                "Built reusable UI components and structured pages for services, projects, and company information",
+                "Implemented Redux for efficient client-side state management",
+                "Created smooth page transitions and interactive animations using Framer Motion",
+                "Developed and integrated REST APIs using Express.js with MySQL for backend data management",
+                "Optimized the website for responsive design, performance, and cross-device compatibility",
             ],
             company: "Project",
             image: "/project/kit.png",
-            tags: ["Next js", "express", "Mysql", "Redux", "Framer Motion"],
+            tags: ["Next.js", "Express.js", "MySQL", "Redux", "Framer Motion"],
             position: "Web Developer",
             type: "fulltime",
             startDate: "2021",
             endDate: "2021",
             link: {
-                label: "View Portfolio",
+                label: "Visit Website",
                 href: "https://Kathmanduinfotech.com",
             },
         },
@@ -380,7 +382,7 @@ export const config: Config = {
                 endDate: "1974",
                 description:
                     "Gained hands-on experience in containerization, Docker CLI, image and container management, Docker Compose, and deploying scalable applications using Docker best practices",
-                logo: "/logo/simplilearn.png",
+                logo: "/logo/simple.jpg",
                 certificationImage: "/certification/simplelearn.png"
             },
         ],

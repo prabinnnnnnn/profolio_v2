@@ -17,11 +17,11 @@ export function Certificate() {
                         </p>
                     </div>
                 </div>
-                <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 pt-12 md:grid-cols-2">
+                <div className="grid max-w-5xl grid-cols-1 gap-6 pt-12 mx-auto md:grid-cols-2">
                     {config.certifications.items.map((certificate) => (
                         <Card
                             key={certificate.platform}
-                            className="group relative overflow-hidden"
+                            className="relative overflow-hidden group"
                         >
                             <div className="space-y-6">
                                 <div className="flex items-start justify-between gap-4">
@@ -32,13 +32,8 @@ export function Certificate() {
                                             </h3>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <GraduationCap className="h-4 w-4 text-primary" />
-                                            <Link
-                                                href={
-                                                    certificate.certificateLink ||
-                                                    ""
-                                                }
-                                            >
+                                            <GraduationCap className="w-4 h-4 text-primary" />
+                                            <Link href={certificate.certificateLink || ""}>
                                                 <span className="text-sm font-medium">
                                                     {certificate.degree}
                                                 </span>
@@ -48,13 +43,14 @@ export function Certificate() {
                                             {certificate.description}
                                         </p>
                                     </div>
-                                    <div className="relative h-10 w-20 overflow-hidden rounded-lg ">
+                                    <div className="relative w-20 h-10 overflow-hidden rounded-lg ">
                                         <Image
                                             src={certificate.logo}
-                                            fill
-                                            alt={certificate.platform}
+                                            height={40}
+                                            width={40}
+                                            alt={certificate.platform || "Certification"}
                                             title={certificate.platform}
-                                            className="absolute inset-0 h-full w-full object-contain"
+                                            className="object-contain"
                                         />
                                     </div>
                                 </div>
